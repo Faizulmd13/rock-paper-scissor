@@ -1,4 +1,4 @@
-function computerInput() {
+let getComputerChoice = function () {
   choice = Math.floor(Math.random() * 3);
 
   switch (choice) {
@@ -11,6 +11,12 @@ function computerInput() {
     default:
       break;
   }
-}
+};
 
-console.log(computerInput);
+console.log(getComputerChoice());
+
+let getHumanChoice = () => {
+  return prompt("Enter your choice").toLowerCase();
+};
+
+console.log(getHumanChoice());
