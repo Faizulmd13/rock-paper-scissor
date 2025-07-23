@@ -1,3 +1,8 @@
+// Step 1:
+// Define getComputerChoice function
+// Select a random number 'choice' between 0 - 2
+// Return rock, paper, scissor based on choice
+
 let getComputerChoice = function () {
   choice = Math.floor(Math.random() * 3);
 
@@ -13,15 +18,25 @@ let getComputerChoice = function () {
   }
 };
 
-// console.log(getComputerChoice());
+// Step 2:
+// Define getHumanChoice function
+// Read user choice and return it as lowercase
 
 let getHumanChoice = () => {
   return prompt("Enter your choice").toLowerCase();
 };
 
-// console.log(getHumanChoice());
+// Step 3:
+// Define global variables humanScore, computerScore
+// Initialzie both as 0
 
 let humanScore = (computerScore = 0);
+
+// Step 4:
+// Define playRound function
+// Take humanChoice and computerChoice as parameters
+// Compute the result based on if else logic while incrementing the score
+// Print result for each round
 
 let playRound = (humanChoice, computerChoice) => {
   if (humanChoice === "rock") {
@@ -57,7 +72,6 @@ let playRound = (humanChoice, computerChoice) => {
   } else {
     console.log(`Your choice ${humanChoice} is invalid`);
   }
-  console.log(`Your Score: ${humanScore}, Computer Score: ${computerScore}`);
 };
 
 playRound(getHumanChoice(), getComputerChoice());
