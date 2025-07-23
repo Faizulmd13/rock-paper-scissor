@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let paper = document.getElementById("paper");
   let scissor = document.getElementById("scissor");
   let result = document.getElementById("result");
-  let user;
   let humanChoice;
 
   function handleClick(choice) {
