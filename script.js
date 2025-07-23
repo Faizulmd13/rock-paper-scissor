@@ -74,4 +74,15 @@ let playRound = (humanChoice, computerChoice) => {
   }
 };
 
-playRound(getHumanChoice(), getComputerChoice());
+// Step 5:
+// Define playGame function
+// Calls playRound until either humanScore or computerScore is 5
+
+function playGame() {
+  while (humanScore != 5 && computerScore != 5) {
+    playRound(getHumanChoice(), getComputerChoice());
+    console.log(`Your Score: ${humanScore}, Computer Score: ${computerScore}`);
+  }
+}
+
+playGame();
