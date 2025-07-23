@@ -1,88 +1,148 @@
-// Step 1:
-// Define getComputerChoice function
-// Select a random number 'choice' between 0 - 2
-// Return rock, paper, scissor based on choice
+document.addEventListener("DOMContentLoaded", function () {
+  let rock = document.getElementById("rock");
+  let paper = document.getElementById("paper");
+  let scissor = document.getElementById("scissor");
+  let result = document.getElementById("result");
+  let user;
+  let humanChoice;
 
-let getComputerChoice = function () {
-  choice = Math.floor(Math.random() * 3);
-
-  switch (choice) {
-    case 0:
-      return "rock";
-    case 1:
-      return "paper";
-    case 2:
-      return "scissor";
-    default:
-      break;
+  function handleClick(choice) {
+    humanChoice = choice;
+    playRound(humanChoice, getComputerChoice());
   }
-};
 
-// Step 2:
-// Define getHumanChoice function
-// Read user choice and return it as lowercase
+  rock.addEventListener("click", () => handleClick("rock"));
+  paper.addEventListener("click", () => handleClick("paper"));
+  scissor.addEventListener("click", () => handleClick("scissor"));
 
-let getHumanChoice = () => {
-  return prompt("Enter your choice").toLowerCase();
-};
+  function getComputerChoice() {
+    let choice = Math.floor(Math.random() * 3);
 
-// Step 3:
-// Define global variables humanScore, computerScore
-// Initialzie both as 0
-
-let humanScore = (computerScore = 0);
-
-// Step 4:
-// Define playRound function
-// Take humanChoice and computerChoice as parameters
-// Compute the result based on if else logic while incrementing the score
-// Print result for each round
-
-let playRound = (humanChoice, computerChoice) => {
-  if (humanChoice === "rock") {
-    if (computerChoice === "rock") {
-      console.log(`It's a tie. ${humanChoice} ties with ${computerChoice}`);
-    } else if (computerChoice === "scissor") {
-      console.log(`You won! ${humanChoice} beats ${computerChoice}`);
-      humanScore += 1;
-    } else {
-      console.log(`You lose! ${humanChoice} lost against ${computerChoice}`);
-      computerScore += 1;
+    switch (choice) {
+      case 0:
+        return "rock";
+      case 1:
+        return "paper";
+      case 2:
+        return "scissor";
+      default:
+        break;
     }
-  } else if (humanChoice === "paper") {
-    if (computerChoice === "paper") {
-      console.log(`It's a tie. ${humanChoice} ties with ${computerChoice}`);
-    } else if (computerChoice === "rock") {
-      console.log(`You won! ${humanChoice} beats ${computerChoice}`);
-      humanScore += 1;
-    } else {
-      console.log(`You lose! ${humanChoice} lost against ${computerChoice}`);
-      computerScore += 1;
-    }
-  } else if (humanChoice === "scissor") {
-    if (computerChoice === "scissor") {
-      console.log(`It's a tie. ${humanChoice} ties with ${computerChoice}`);
-    } else if (computerChoice === "paper") {
-      console.log(`You won! ${humanChoice} beats ${computerChoice}`);
-      humanScore += 1;
-    } else {
-      console.log(`You lose! ${humanChoice} lost against ${computerChoice}`);
-      computerScore += 1;
-    }
-  } else {
-    console.log(`Your choice ${humanChoice} is invalid`);
   }
-};
 
-// Step 5:
-// Define playGame function
-// Calls playRound until either humanScore or computerScore is 5
+  let humanScore = (computerScore = 0);
+  function playRound(humanChoice, computerChoice) {
+    if (humanChoice === "rock") {
+      if (computerChoice === "rock") {
+        let userChoice = (document.getElementById("user-choice").innerHTML =
+          " ✊");
+        let computersChoice = (document.getElementById(
+          "computer-choice"
+        ).innerHTML = " ✊");
+        result.innerHTML = `It's a tie. ${humanChoice} ties with ${computerChoice}`;
+        console.log(`It's a tie. ${humanChoice} ties with ${computerChoice}`);
+      } else if (computerChoice === "scissor") {
+        let userChoice = (document.getElementById("user-choice").innerHTML =
+          " ✊");
+        let computersChoice = (document.getElementById(
+          "computer-choice"
+        ).innerHTML = " ✌️");
+        result.innerHTML = `You won! ${humanChoice} beats ${computerChoice}`;
+        console.log(`You won! ${humanChoice} beats ${computerChoice}`);
+        humanScore += 1;
+      } else {
+        let userChoice = (document.getElementById("user-choice").innerHTML =
+          " ✊");
+        let computersChoice = (document.getElementById(
+          "computer-choice"
+        ).innerHTML = " ✋");
+        result.innerHTML = `You lose! ${humanChoice} lost against ${computerChoice}`;
+        console.log(`You lose! ${humanChoice} lost against ${computerChoice}`);
+        computerScore += 1;
+      }
+    } else if (humanChoice === "paper") {
+      if (computerChoice === "paper") {
+        let userChoice = (document.getElementById("user-choice").innerHTML =
+          " ✋");
+        let computersChoice = (document.getElementById(
+          "computer-choice"
+        ).innerHTML = " ✋");
+        result.innerHTML = `It's a tie. ${humanChoice} ties with ${computerChoice}`;
+        console.log(`It's a tie. ${humanChoice} ties with ${computerChoice}`);
+      } else if (computerChoice === "rock") {
+        let userChoice = (document.getElementById("user-choice").innerHTML =
+          " ✋");
+        let computersChoice = (document.getElementById(
+          "computer-choice"
+        ).innerHTML = " ✊");
+        result.innerHTML = `You won! ${humanChoice} beats ${computerChoice}`;
+        console.log(`You won! ${humanChoice} beats ${computerChoice}`);
+        humanScore += 1;
+      } else {
+        let userChoice = (document.getElementById("user-choice").innerHTML =
+          " ✋");
+        let computersChoice = (document.getElementById(
+          "computer-choice"
+        ).innerHTML = " ✌️");
+        result.innerHTML = `You lose! ${humanChoice} lost against ${computerChoice}`;
+        console.log(`You lose! ${humanChoice} lost against ${computerChoice}`);
+        computerScore += 1;
+      }
+    } else {
+      if (computerChoice === "scissor") {
+        let userChoice = (document.getElementById("user-choice").innerHTML =
+          " ✌️");
+        let computersChoice = (document.getElementById(
+          "computer-choice"
+        ).innerHTML = " ✌️");
+        result.innerHTML = `It's a tie. ${humanChoice} ties with ${computerChoice}`;
+        console.log(`It's a tie. ${humanChoice} ties with ${computerChoice}`);
+      } else if (computerChoice === "paper") {
+        let userChoice = (document.getElementById("user-choice").innerHTML =
+          " ✌️");
+        let computersChoice = (document.getElementById(
+          "computer-choice"
+        ).innerHTML = " ✋");
+        result.innerHTML = `You won! ${humanChoice} beats ${computerChoice}`;
+        console.log(`You won! ${humanChoice} beats ${computerChoice}`);
+        humanScore += 1;
+      } else {
+        let userChoice = (document.getElementById("user-choice").innerHTML =
+          " ✌️");
+        let computersChoice = (document.getElementById(
+          "computer-choice"
+        ).innerHTML = " ✊");
+        result.innerHTML = `You lose! ${humanChoice} lost against ${computerChoice}`;
+        console.log(`You lose! ${humanChoice} lost against ${computerChoice}`);
+        computerScore += 1;
+      }
+    }
+    let userScore = (document.getElementById(
+      "user-score"
+    ).innerHTML = `Player: ${humanScore}`);
+    let computersScore = (document.getElementById(
+      "computer-score"
+    ).innerHTML = `Computer: ${computerScore}`);
 
-function playGame() {
-  while (humanScore != 5 && computerScore != 5) {
-    playRound(getHumanChoice(), getComputerChoice());
-    console.log(`Your Score: ${humanScore}, Computer Score: ${computerScore}`);
+    if (humanScore === 5 || computerScore === 5) {
+      endGame();
+    }
   }
-}
 
-playGame();
+  function endGame() {
+    if (humanScore === 5) {
+      result.innerHTML = "🎉 You win the match!";
+    } else {
+      result.innerHTML = "💀 Computer wins the match!";
+    }
+    rock.disabled = true;
+    paper.disabled = true;
+    scissor.disabled = true;
+
+    document.getElementById("play-again").style.display = "block";
+  }
+
+  document.getElementById("play-again").addEventListener("click", function () {
+    location.reload();
+  });
+});

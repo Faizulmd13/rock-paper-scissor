@@ -5,6 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock, Paper, Scissors!</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="header">ROCK PAPER SCISSOR</div>
+    </header>
+    <section>
+      <div class="result">
+        <h2>Choose your Weapon ⚔️</h2>
+        <p id="result">First to score 5 wins the game</p>
+      </div>
+      <div class="chosen-choice">
+        <div class="choice">
+          <div id="user-choice">?</div>
+          <p id="user-score">Player:</p>
+        </div>
+        <div class="choice">
+          <div id="computer-choice">?</div>
+          <p id="computer-score">Computer:</p>
+        </div>
+      </div>
+      <div class="hidden-button">
+        <button id="play-again" style="display: none">play again</button>
+      </div>
+      <div class="choices">
+        <div class="rock">
+          <button id="rock">
+            <img
+              class="choice"
+              src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTUzaTQ2bmllZWxramRyYjZ1azlwbGd6aGNsY2d1cWliaTRmanhwZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8YcJb8tW47SxYUZUQy/giphy.gif"
+              alt="Rock"
+            />
+          </button>
+        </div>
+        <div class="paper">
+          <button id="paper">
+            <img
+              class="choice"
+              src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTRhZmN5dXNiM3ByMHRwb3loeGM1OHIwMGJ6am1mZTFoZDFlaThrMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9bJ2OJyi9quJAT81HC/giphy.gif"
+              alt="Paper"
+            />
+          </button>
+        </div>
+        <div class="scissor">
+          <button id="scissor">
+            <img
+              class="choice"
+              src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWUxNWhoanhndWNzcDltYjNkcGJ5MHhvbjQ3YmlubngwZDducXp0OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RD3QScf0fgktocr353/giphy.gif"
+              alt="Scissor"
+            />
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <a href="https://github.com/Faizulmd13" target="_blank">Faizulmd13</a>
+    </footer>
+  </body>
 </html>
