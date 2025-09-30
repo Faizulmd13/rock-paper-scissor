@@ -1,85 +1,56 @@
-# 🪨 Rock Paper Scissors Game
+# Rock Paper Scissors Game
 
-A simple and fun **Rock Paper Scissors** game built using HTML, CSS, and JavaScript. The user plays against the computer, and the first to reach 5 points wins the match!
+This is a simple and fun **Rock Paper Scissors** game built using HTML, CSS, and JavaScript. The user plays against the computer, and the first to reach 5 points wins the match!
 
----
+## Live Demo
+View on GitHub Pages: https://faizulmd13.github.io/rock-paper-scissor/
 
-## 🚀 Live Demo
+## Features
+- Play Rock, Paper, Scissors against a computer opponent
+- Visual feedback using funny **GIF buttons** for each choice
+- Emoji display for both user and computer's choices
+- Real-time score tracking
+- Win condition: First to 5 points wins the game
+- “Play Again” button to reset the game
 
-🔗 [Live Web Page](https://faizulmd13.github.io/rock-paper-scissor/)
+## Tech Stack
+- HTML5 – Structure
+- CSS3 – Styling, Flexbox layout, Responsive design
+- JavaScript (Vanilla) – Game logic, DOM manipulation, score tracking
 
----
+## Project Goal
+The aim of this project was to practice:
+- Building interactive web applications using **vanilla JavaScript**
+- Manipulating the **DOM dynamically** based on user input
+- Creating responsive and visually engaging interfaces
+- Implementing game logic and real-time score tracking
 
-## 🎮 Features
-
-- Play Rock, Paper, Scissors against a computer opponent.
-- Visual feedback using funny **GIF buttons** for each choice.
-- Emoji display for both user and computer's choices.
-- Real-time score tracking.
-- Win condition: First to 5 points wins the game.
-- “Play Again” button to reset the game.
-
----
-
-## 🛠️ Technologies Used
-
-- **HTML5** – Structure
-- **CSS3** – Styling, Flexbox layout, Responsive design
-- **JavaScript (Vanilla)** – Game logic, DOM manipulation, score tracking
-
----
-
-## 📁 Project Structure
-
-```
+## Project Structure
 rock-paper-scissor/
-├── index.html
-├── styles.css
-├── script.js
-├── LICENSE
-├── README.md
-├── assets/
-│   └── live-model.png
-```
+├── index.html        # Main HTML file
+├── styles.css        # Styling and layout
+├── script.js         # Game logic and DOM manipulation
+├── LICENSE           # MIT License
+└── README.md         # Project documentation
 
----
-
-## 📷 Screenshots
-
-> [live-model](./assets/live-model.png)
-
----
-
-## ✅ How to Use
-
-1. Clone or download the repository:
-   ```bash
+## How to Run Locally
+1. Clone the repo:
    git clone https://github.com/Faizulmd13/rock-paper-scissors.git
-   ```
 2. Open `index.html` in your browser.
 3. Click on Rock 🪨, Paper 📄, or Scissors ✂️ to play.
-4. Reach 5 points before the computer to win!
-5. Or else you can just visit the [Live Page](https://faizulmd13.github.io/rock-paper-scissor/)
+4. First to reach 5 points wins the game.
+5. Or visit the Live Demo directly: https://faizulmd13.github.io/rock-paper-scissor/
 
----
+## Future Improvements
+- Add sound effects and animations
+- Enhance responsive design for various devices
+- Store match history or highest score
+- Add a leaderboard or multiplayer mode
+- Implement dark/light theme switching
 
-## ✍️ Author
-
+## Author
 **Faizul Md**  
-📎 [GitHub](https://github.com/Faizulmd13)
+GitHub: https://github.com/Faizulmd13
 
----
-
-## 📌 Future Improvements
-
-- Add sound effects and animations.
-- Add Responsive styles for various devices
-- Store match history or highest score.
-- Add a leaderboard or multiplayer mode.
-- Switch to dark/light themes.
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
+## License
+This project is open source and available under the MIT License.
